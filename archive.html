@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>archive</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .footer-fade-in {
+      opacity: 0;
+      animation: footerFadeIn 1.2s cubic-bezier(0.77,0,0.175,1) 0.5s forwards;
+    }
+    @keyframes footerFadeIn {
+      from { opacity: 0; transform: translateY(60px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .archive-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  max-width: 100vw;
+  justify-content: center;
+  margin: 32px 0;
+    }
+    .archive-images img {
+  width: 46vw;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  display: block;
+    }
+    @media (max-width: 600px) {
+      .archive-images img {
+        width: 98vw;
+        max-width: 98vw;
+      }
+    }
+    footer {
+            text-align: center;
+            margin-top: 100px;
+            color: #888;
+            font-size: 0.9em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: none;
+        }
+        footer.footer-fade-in {
+            animation: footerFadeIn 2s cubic-bezier(0.77,0,0.175,1) forwards;
+        }
+        @keyframes footerFadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .back-btn-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+    .back-btn-link {
+      display: inline-block;
+      text-align: center;
+    }
+    .back-btn-img {
+      width: 280px;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 0;
+      transition: transform 0.2s cubic-bezier(0.77,0,0.175,1);
+      background: #fff;
+      cursor: pointer;
+    }
+    .back-btn-img:hover {
+      transform: scale(1.15)
+      
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div style="width:100%;display:flex;justify-content:center;margin-top:32px;">
+      <img src="writing2.png" alt="Writing" style="display:block;margin:0 auto 24px auto;width:320px;max-width:80vw;">
+    </div>
+    <div class="archive-images">
+      <img src="p8.jpg" alt="p1">
+      <img src="p3.jpg" alt="p2">
+      <img src="p4.jpg" alt="p3">
+      <img src="p1.jpg" alt="p4">
+      <img src="p5.jpg" alt="p5">
+      <img src="p6.jpg" alt="p6">
+      <img src="p7.jpg" alt="p7">
+      <img src="p2.jpg" alt="p8">
+      <img src="p9.jpg" alt="p9">
+      <img src="p10.jpg" alt="p10">
+      <img src="p11.jpg" alt="p11">
+      <img src="p12.png" alt="p12">
+    </div>
+  </main>
+  <div class="back-btn-container">
+    <a href="index.html" class="back-btn-link">
+      <img src="writing3.png" alt="Back to Home" class="back-btn-img">
+    </a>
+  </div>
+  <footer class="footer-fade-in">
+    &copy; copyright 2025 modishhhly LLC. All rights reserved.
+  </footer>
+    
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var footer = document.querySelector('footer');
+      if (footer) footer.classList.add('footer-fade-in');
+    });
+  </script>
+</body>
+</html>
